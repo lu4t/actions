@@ -15,14 +15,12 @@ Hay que esperar unos segundos tras el commit, para que de tiempo a que haga el b
 Para tirar de esta imagen en un deployment:
 
 1- se hace login al repo privado:
-
-  ´docker login <tu-repo-privado>´
+  `docker login tu-repo-privado`
 
 1.1 Copia el archivo de configuración a un lugar seguro:
   `cp ~/.docker/config.json /ruta/segura/config.json`
 
 2- el fichero de configuración de #1 se guarda en un secret:
-
   `kubectl create secret generic <nombre-secreto> --from-file=.dockerconfigjson=/ruta/segura/config.json --type=kubernetes.io/dockerconfigjson`
 
 3- se instancia el secret desde los deployments con la key: imagePullSecrets:
