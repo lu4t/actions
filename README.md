@@ -18,7 +18,7 @@ Para tirar de esta imagen en un deployment:
 
   ´docker login <tu-repo-privado>´
 
-# Copia el archivo de configuración a un lugar seguro
+1.1 Copia el archivo de configuración a un lugar seguro:
   `cp ~/.docker/config.json /ruta/segura/config.json`
 
 2- el fichero de configuración de #1 se guarda en un secret:
